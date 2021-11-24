@@ -1,0 +1,50 @@
+.image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  img {
+    object-fit: cover;
+  }
+
+  > * {
+    box-sizing: border-box;
+    padding: 2px;
+  }
+}
+
+@media (orientation: landscape) {
+  .image-wrapper {
+    > * {
+      height: 300px;
+
+      &:nth-child(5n + 2) {
+        width: 40%;
+      }
+      &:nth-child(5n + 1),
+      &:nth-child(5n + 3) {
+        width: 30%;
+      }
+      &:nth-child(5n + 4),
+      &:nth-child(5n + 5) {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media (orientation: portrait) {
+  .image-wrapper {
+    > * {
+      height: 200px;
+
+      &:nth-child(4n + 1),
+      &:nth-child(4n + 4) {
+        width: 40%;
+      }
+      &:nth-child(4n + 2),
+      &:nth-child(4n + 3) {
+        width: 60%;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "sass src/image-wrapper.scss lib/image-wrapper.css",
+    "format": "prettier --write src test"
+  },
+  "devDependencies": {
+    "prettier": "^2.4.1",
+    "sass": "^1.43.4"
+  }
+}
